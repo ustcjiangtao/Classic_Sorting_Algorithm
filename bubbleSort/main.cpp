@@ -19,17 +19,23 @@ void bubbleSort1(vector<int> &v)  //写法一
     }
 }
 
-void bubbleSort2(vector<int> &a)  //写法二
+void bubbleSort2(vector<int> &a)  //写法二(易懂)
 {
     int len = a.size();
-    for (int i = 0; i < len - 1; i++) //需要循环次数
+    for (int i = 0; i < len - 1; i++) //需要循环次数（n个元素需要扫描n-1轮）
     {
-        for (int j = 0; j < len - 1 - i; j++) //每次需要比较次数
+        bool flag = false;  //flag用来判断是否执行了数据交换的操作（当在一轮扫描完成后，检查在这一轮中是否执行了数据交换操作，若没有，则表示整个数列已经排序完成，可以直接跳出循环）
+        for (int j = 0; j < len - 1 - i; j++) //每次需要比较次数（每轮需要比较的次数逐步减少）
         {
             if (a[j] > a[j + 1])
             {
                 swap(a[j], a[j + 1]); //不满足偏序，交换
+                flag = true;
             }
+        }
+        if(flag == false)
+        {
+            break;
         }
     }
 }

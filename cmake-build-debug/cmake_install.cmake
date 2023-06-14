@@ -1,4 +1,4 @@
-# Install script for directory: /Users/ustc.jiangtao/CLionProjects/C++/Classic Sorting Algorithm
+# Install script for directory: /Users/ustc.jiangtao/CLionProjects/Classic_Sorting_Algorithm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/ustc.jiangtao/CLionProjects/C++/Classic Sorting Algorithm/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/ustc.jiangtao/CLionProjects/Classic_Sorting_Algorithm/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
