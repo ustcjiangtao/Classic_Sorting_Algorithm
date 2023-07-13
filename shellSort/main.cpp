@@ -25,3 +25,11 @@ void shellSort(vector<int> &a)
 }
 
 
+int main()
+{
+    vector<int> v{5, 3, 6, 8, 4, 1, 2};
+    shellSort(v);
+    for(auto it = v.begin(); it != v.end(); it++)
+        cout << *it << " ";
+    return 0;
+}

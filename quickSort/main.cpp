@@ -5,7 +5,8 @@ using namespace std;
 int partition(vector<int> &v, int left, int right)
 {
     //写法一
-    int pivot = v[left];
+    /*
+     int pivot = v[left];
     int i = right + 1;
     for(int j = right; j > left; j--)
     {
@@ -17,6 +18,8 @@ int partition(vector<int> &v, int left, int right)
     }
     swap(v[i-1], v[left]);
     return (i-1);
+     */
+
 
     //写法二
     /*
@@ -33,6 +36,45 @@ int partition(vector<int> &v, int left, int right)
     swap(v[i + 1], v[right]);
     return i + 1;
      */
+
+    //写法三
+    /*
+    int pivot = v[left];
+    int i = left, j = right;
+    while(i < j)
+    {
+        while(i < j && v[j] >= pivot)
+        {
+            --j;
+        }
+        v[i] = v[j];
+        while(i < j && v[i] <= pivot)
+        {
+            ++i;
+        }
+        v[j] = v[i];
+    }
+    v[i] = pivot;
+    return i;
+     */
+
+    //写法四
+    int pivot = v[left];
+    int i = left, j = right;
+    while(i < j)
+    {
+        while(i < j && v[j] >= pivot)
+        {
+            --j;
+        }
+        while(i < j && v[i] <= pivot)
+        {
+            ++i;
+        }
+        swap(v[i], v[j]);
+    }
+    swap(v[i], v[left]);
+    return i;
 }
 
 void quickSort(vector<int> &v, int left, int right)

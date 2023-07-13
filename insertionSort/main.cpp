@@ -11,7 +11,9 @@ void insertionSort(vector<int> &v)
     {
         int tmp = v[i];
         for(j = i; j > 0 && v[j-1] > tmp; j--)
+        {
             v[j] = v[j-1];
+        }
         v[j] = tmp;
     }
 }
