@@ -1,6 +1,0 @@
-# ninja log v5
-0	293	1658759781386119410	CMakeFiles/C.dir/bubbleSort/main.cpp.o	339e3f47c7a3fc2a
-338	371	1658768018551930650	C	79b314b3ae0170c5
-1	338	1658768018517532341	CMakeFiles/C.dir/quickSort/main.cpp.o	dc093baa78dc8d68
-0	299	1658760112268558752	CMakeFiles/C.dir/insertionSort/main.cpp.o	5b3932c96fe0afbd
-0	322	1658760519453467475	CMakeFiles/C.dir/selectionSort/main.cpp.o	3d539ea60dad9021
